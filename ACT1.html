@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>ACTIVITY 1 SIMPLE CONVERSION</title>
+  </div>
+
+
+</head>
+
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+  
+    <style>
+        body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: white;
+}
+        </style>
+        <div class="topnav">
+          <a class="active" href="Homepage.html">Home</a>
+          <a href="ACT1.html">Assignment #1 - Simple Computations </a>
+          <a href="ACT2.html">Assignment #2 - Income Tax Calculator</a>
+          <a href="ACT3.html">Assignment #3 - Factorial, Sum and Average of First N Natural Numbers</a>
+          <a href="ACT4.html">Assignment #4 - Simple Payroll</a>
+          </div>
+        
+          <div class="celcius" align="center">
+            <h1>Simple Computations - Chavez</h1>
+            <br>
+            
+            <h3>Celcius to Fahrenheit</h3>
+            <p>Type a value:</p>
+            
+            <p>
+                <label>Celsius</label>
+                <input id="inputCelsius" type="number1" placeholder="Celsius" oninput="temperatureConverter1(this.value)" onchange="temperatureConverter1(this.value)">
+              </p>
+              <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+              
+              <script>
+              function temperatureConverter1(garve) {
+                valNum = parseFloat(garve);
+                document.getElementById("outputFahrenheit").innerHTML=(garve*1.8)+32;
+              }
+              </script>
+             </div>
+             <br>
+            
+            
+                    <div class="celcius" align="center">
+            <h3>Fahrenheit to Celsius</h3>
+            <p>Type a value:</p>
+            
+            <p>
+              <label>Fahrenheit</label>
+              <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter2(this.value)" onchange="temperatureConverter2(this.value)">
+            </p>
+            <p>Celcius: <span id="outputCelcius"></span></p>
+            
+            <script>
+            function temperatureConverter2(valNum) {
+              valNum = parseFloat(valNum);
+              document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+            }
+            </script>
+            
+            </div>
+            <br>
+            
+            
+            <div class="celcius" align="center">
+            <h3>Meters to Feet</h3>
+            <p>Type a value:</p>
+            
+            <p>
+              <label>Meters</label>
+              <input id="inputMeters" type="number" placeholder="Meters" oninput="lengthconverter1(this.value)" onchange="lengthconverter1(this.value)">
+            </p>
+              <p>Feet: <span id="outputFeet"></span></p>
+            
+            <script>
+                function lengthconverter1(mtof){
+                    document.getElementById("outputFeet").innerHTML=mtof*3.2808;
+                }
+            </script>
+            </div>
+            <br>
+            
+            <div class="celcius" align="center">
+            <h3>Feet to Meters</h3>
+            <p>Type a value:</p>
+            
+            <p>
+              <label>Feet</label>
+              <input id="inputFeet" type="number" placeholder="Feet" oninput="lengthconverter2(this.value)" onchange="lengthconverter2(this.value)">
+            </p>
+              <p>Meters: <span id="outputMeters"></span></p>
+            
+            <script>
+                function lengthconverter2(ftom){
+                    document.getElementById("outputMeters").innerHTML=ftom/3.2808;
+                }
+            
+            </script>
+            </div>
+            <br>
+            
+            </body>
+            </html>

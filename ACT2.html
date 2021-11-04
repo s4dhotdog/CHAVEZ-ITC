@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+
+      <title>Activity 2 - Tax Calculator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<style>
+    body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color:rgb(255, 240, 154); 
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: white;
+}
+</style>
+
+<div class="topnav">
+  <a class="active" href="Homepage.html">Home</a>
+  <a href="ACT1.html">Assignment #1 - Simple Computations </a>
+  <a href="ACT2.html">Assignment #2 - Income Tax Calculator</a>
+  <a href="ACT3.html">Assignment #3 - Factorial, Sum and Average of First N Natural Numbers</a>
+  <a href="ACT4.html">Assignment #4 - Simple Payroll</a>
+
+        
+
+        </div>
+  </head>
+
+  <body>
+            
+          <div class="celcius" align="center">
+          <h1>Income Tax Calculator</h1><br/>
+          <label for="income">Net taxable income: </label>
+          <input id="income" name="income" type="number" onkeyup="taxIncome()">
+          <br/>
+          <label for="tax">Tax due: </label>
+          <input id="tax" name="tax" type="number" readonly></input><br/><br/>
+      
+      
+      
+      <script>
+          function taxIncome(){
+              var inc = document.getElementById("income").value*1;
+              var base, percentE, fixedT, due;
+              if(inc>=250000 && inc<400000){
+                  base=250000;
+                  percentE=0.20;
+                  fixedT=0;
+              }
+              else if(inc>=400000 && inc<800000){
+                  base=400000;
+                  percentE=0.25;
+                  fixedT=30000;
+              }
+              else if(inc>=800000 && inc<2000000){
+                  base=800000;
+                  percentE=0.3;
+                  fixedT=130000;
+              }
+              else if(inc>=2000000 && inc<8000000){
+                  base=2000000;
+                  percentE=0.32;
+                  fixedT=490000;
+              }
+              else if(inc>=8000000){
+                  base=8000000;
+                  percentE=0.35;
+                  fixedT=2410000;
+              }
+              else{
+                  base=0;
+                  percentE=0;
+                  fixedT=0;
+              }
+              due=(inc-base)*percentE+fixedT;
+              document.getElementById("tax").value=due;
+              
+          }
+         
+      </script>
+      
+  </body>
+
+</html>
